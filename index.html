@@ -368,6 +368,48 @@
   </div>
 </section>
 
+<!-- ─── Cage-Guided Point Deformation ───────────────────────────────────── -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Cage-Guided Point Deformation</h2>
+    <p class="has-text-centered" style="margin-bottom: 2rem; color: #555;">
+      These videos visualize how cage deformation drives the deformation of the source point cloud.
+      As the cage progressively changes, the enclosed points move accordingly, producing smooth and
+      globally coherent adversarial shape deformation.
+    </p>
+
+    <div class="columns is-multiline video-grid">
+      <div class="column is-half has-text-centered">
+        <p class="video-label">Airplane → Rocket</p>
+        <video autoplay controls muted loop width="100%">
+          <source src="static/videos/cage/cage_video1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="column is-half has-text-centered">
+        <p class="video-label">Chair → Cap</p>
+        <video autoplay controls muted loop width="100%">
+          <source src="static/videos/cage/cage_video2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="column is-half has-text-centered">
+        <p class="video-label">Vase → Bottle</p>
+        <video autoplay controls muted loop width="100%">
+          <source src="static/videos/cage/cage_video3.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="column is-half has-text-centered">
+        <p class="video-label">Vase → Bowl</p>
+        <video autoplay controls muted loop width="100%">
+          <source src="static/videos/cage/cage_video4.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+  
 <!-- ─── Video Results ────────────────────────────────────────────────────── -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -402,67 +444,6 @@
         <video autoplay controls muted loop width="100%">
           <source src="static/videos/video4.mp4" type="video/mp4">
         </video>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── Video Comparison Slider ──────────────────────────────────────────── -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Video Comparison</h2>
-    <p class="has-text-centered" style="margin-bottom: 2rem; color: #555;">
-      Drag the divider left or right to compare our method with DG-Mesh.
-    </p>
-
-    <div class="columns is-multiline video-grid">
-      <!-- Horse -->
-      <div class="column is-one-third has-text-centered">
-        <p class="video-label">Horse</p>
-        <div class="video-compare-wrap" data-compare>
-          <video autoplay muted loop playsinline>
-            <source src="static/videos/comparison/horse_ours.mp4" type="video/mp4">
-          </video>
-          <video class="vc-right" autoplay muted loop playsinline>
-            <source src="static/videos/comparison/horse_dgmesh.mp4" type="video/mp4">
-          </video>
-          <div class="vc-divider"></div>
-          <div class="vc-handle"></div>
-          <span class="vc-label-left">DG-Mesh</span>
-          <span class="vc-label-right">Ours</span>
-        </div>
-      </div>
-      <!-- Beagle -->
-      <div class="column is-one-third has-text-centered">
-        <p class="video-label">Beagle</p>
-        <div class="video-compare-wrap" data-compare>
-          <video autoplay muted loop playsinline>
-            <source src="static/videos/comparison/beagle_ours.mp4" type="video/mp4">
-          </video>
-          <video class="vc-right" autoplay muted loop playsinline>
-            <source src="static/videos/comparison/beagle_dgmesh.mp4" type="video/mp4">
-          </video>
-          <div class="vc-divider"></div>
-          <div class="vc-handle"></div>
-          <span class="vc-label-left">DG-Mesh</span>
-          <span class="vc-label-right">Ours</span>
-        </div>
-      </div>
-      <!-- Bird -->
-      <div class="column is-one-third has-text-centered">
-        <p class="video-label">Bird</p>
-        <div class="video-compare-wrap" data-compare>
-          <video autoplay muted loop playsinline>
-            <source src="static/videos/comparison/bird_ours.mp4" type="video/mp4">
-          </video>
-          <video class="vc-right" autoplay muted loop playsinline>
-            <source src="static/videos/comparison/bird_dgmesh.mp4" type="video/mp4">
-          </video>
-          <div class="vc-divider"></div>
-          <div class="vc-handle"></div>
-          <span class="vc-label-left">DG-Mesh</span>
-          <span class="vc-label-right">Ours</span>
-        </div>
       </div>
     </div>
   </div>
