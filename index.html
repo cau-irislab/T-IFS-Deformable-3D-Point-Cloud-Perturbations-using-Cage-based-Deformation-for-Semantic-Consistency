@@ -694,20 +694,21 @@ document.querySelectorAll('.mesh-frame-btns').forEach(function(btns) {
 <!-- ─── Qualitative Comparison ───────────────────────────────────────────── -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Qualitative Comparison</h2>
+    <h2 class="title is-3 has-text-centered">Qualitative Result</h2>
     <figure class="image" style="margin-bottom: 2rem;">
       <img src="static/images/fig_qualitative_comparison.png"
            alt="Qualitative comparison with DG-Mesh and Dynamic-2DGS on DG-Mesh and D-NeRF datasets.">
     </figure>
     <div class="content has-text-justified">
       <p>
-        We compare against state-of-the-art dynamic reconstruction methods — DG-Mesh and Dynamic-2DGS —
-        on the DG-Mesh and D-NeRF datasets. For each method, we show both the direct Gaussian Splatting (GS)
-        rendering and the extracted mesh surface.
-        DG-Mesh yields blurry renderings, and Dynamic-2DGS produces fragmented or incomplete surfaces
-        (e.g., missing parts in <em>Horse</em>).
-        Our method reconstructs sharp appearances with topologically clean meshes, achieving superior
-        performance in both rendering fidelity and geometric accuracy.
+        The first and fourth columns represent the source point clouds, which are the point clouds to be
+        deformed. The second and fifth columns represent the target point clouds that guide the deformation
+        of the source point clouds. The source point clouds are deformed to match the target point clouds.
+        The third and sixth columns represent the adversarially deformable point cloud examples generated 
+        by the proposed perturbations. regardless of 3D shape changes, the proposed adversarial examples 
+        remain visually consistent with the original object category from a human perspective because the 
+        source point clouds are smoothly deformed by aligning them with the target point clouds using the 
+        enclosing cage.
       </p>
     </div>
   </div>
