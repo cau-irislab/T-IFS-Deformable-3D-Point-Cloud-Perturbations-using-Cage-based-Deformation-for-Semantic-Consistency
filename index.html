@@ -347,21 +347,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            While 3D Gaussian Splatting (3DGS) has enabled high-quality reconstruction of dynamic scenes,
-            a persistent tension remains between Novel View Synthesis (NVS) fidelity and mesh geometric accuracy.
-            We argue that this arises because deformation modeling, surface alignment, and appearance expressiveness
-            compete for shared representational degrees of freedom. To mitigate this rendering–geometry trade-off,
-            we propose <strong>Deformable 3D Point Cloud Perturbations</strong>.
+            Deep neural networks for 3D point cloud analysis are widely used in applications such as autonomous driving
+            and robotics, yet they remain highly vulnerable to adversarial attacks. Existing methods typically minimize
+            point-wise distances to preserve geometry, which constrains perturbations and leads to a trade-off between
+            imperceptibility and attack strength. To address this limitation, we propose a cage-based adversarial
+            deformation framework that generates semantically consistent perturbations aligned with natural intra-class
+            variations.
           </p>
           <p>
-            <strong>Multi-Canonical Deformation Modeling (MCDM)</strong> partitions the sequence into localized
-            temporal segments to reduce motion over-smoothing.
-            <strong>Surface-Aligned Anisotropic Densification (SAAD)</strong> initializes 2D Gaussians with scales
-            and rotations derived from local face geometry for more faithful surface support.
-            <strong>Residual-Based Expressiveness Restoration (RBER)</strong> restores fine appearance details
-            through sequential 3D and 2D residual refinement on top of a geometry-stabilized base.
-            Experiments on DG-Mesh, D-NeRF, and Nerfies show that our method improves the rendering–geometry
-            balance, yielding consistent gains in rendering quality while preserving or improving mesh accuracy.
+            Our method refines a source cage, predicts adversarial cage displacements by fusing source-target features,
+            and computes smooth point-wise offsets using solid-angle- and distance-aware weights. This enables globally
+            coherent deformations that appear natural to humans while effectively misleading classifiers. Extensive
+            experiments on ModelNet40, ShapeNet-Part, and ScanObjectNN show that our approach achieves consistently high
+            attack success rates while simultaneously improving point uniformity and reducing local geometric distortions.
+            Furthermore, the perturbations remain effective against various defense methods.
           </p>
         </div>
       </div>
