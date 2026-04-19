@@ -655,13 +655,12 @@ document.querySelectorAll('.mesh-frame-btns').forEach(function(btns) {
     </figure>
     <div class="content has-text-justified">
       <p>
-        Our pipeline integrates three core modules that progressively decouple the competing objectives
-        in dynamic Gaussian reconstruction — temporal deformation span, geometry-support formation,
-        and residual appearance modeling.
+        The proposed deformable 3D adversarial perturbation method, which consists of three parts: 
+        1) source cage generation, 2) adversarial cage generation, and 3) deformable 3D point cloud perturbation.
       </p>
 
       <div class="method-block">
-        <strong>① Multi-Canonical Deformation Modeling (MCDM)</strong><br>
+        <strong>① Source Cage Generation</strong><br>
         Addresses excessive temporal deformation span by partitioning the sequence into K localized
         temporal groups, each assigned to an independent canonical Gaussian set. A global warm-up stage
         first establishes a sequence-level prior, which is then cloned into K group-specific canonical sets.
@@ -670,7 +669,7 @@ document.querySelectorAll('.mesh-frame-btns').forEach(function(btns) {
       </div>
 
       <div class="method-block">
-        <strong>② Surface-Aligned Anisotropic Densification (SAAD)</strong><br>
+        <strong>② Adversarial Cage Generation</strong><br>
         Corrects the geometry-driven bias of conventional isotropic densification under mesh supervision.
         Instead of inserting primitives at face centroids with isotropic scales, SAAD derives the initial
         covariance of each new Gaussian from the eigendecomposition of local face vertex covariance,
@@ -680,7 +679,7 @@ document.querySelectorAll('.mesh-frame-btns').forEach(function(btns) {
       </div>
 
       <div class="method-block">
-        <strong>③ Residual-Based Expressiveness Restoration (RBER)</strong><br>
+        <strong>③ Deformable 3D Point Cloud Perturbations</strong><br>
         Recovers the fine-scale appearance capacity attenuated by strong surface supervision. Built on top
         of the geometry-stabilized base, RBER employs two sequential residual stages: a 3D Gaussian
         deformation residual network (<em>f<sub>DR</sub></em>) that applies local parameter corrections to each
