@@ -723,7 +723,7 @@ document.querySelectorAll('.mesh-frame-btns').forEach(function(btns) {
       <div class="column is-four-fifths has-text-centered">
         <h3 class="title is-4">Effectiveness of MCDM</h3>
         <figure class="image" style="margin-bottom: 1.5rem;">
-          <img src="static/images/ablation1.png"
+          <img src="static/images/ablation.png"
                alt="Ablation on MCDM: baseline vs. multi-canonical deformation across an extended temporal sequence.">
         </figure>
         <div class="content has-text-justified">
@@ -742,29 +742,6 @@ document.querySelectorAll('.mesh-frame-btns').forEach(function(btns) {
     </div>
 
     <hr class="ablation-divider">
-
-    <!-- Ablation 2 -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths has-text-centered">
-        <h3 class="title is-4">Effectiveness of SAAD</h3>
-        <figure class="image" style="margin-bottom: 1.5rem;">
-          <img src="static/images/ablation2.png"
-               alt="Ablation on SAAD: isotropic densification vs. surface-aligned anisotropic densification.">
-        </figure>
-        <div class="content has-text-justified">
-          <p>
-            We compare isotropic densification (baseline) against our Surface-Aligned Anisotropic
-            Densification (SAAD). Under mesh supervision, isotropic primitives inserted at face centroids
-            ignore local surface anisotropy, progressively degrading rendering quality as they accumulate
-            (visible blur at 10k → 25k iterations).
-            SAAD derives the initial covariance of each new Gaussian from local face vertex statistics
-            via eigendecomposition, producing surface-aligned primitives that preserve structural detail.
-            The result is sharper boundaries and cleaner local structure throughout training.
-          </p>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
