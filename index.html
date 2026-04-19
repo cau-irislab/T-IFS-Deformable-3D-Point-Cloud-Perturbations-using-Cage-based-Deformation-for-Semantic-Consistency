@@ -745,6 +745,55 @@ document.querySelectorAll('.mesh-frame-btns').forEach(function(btns) {
   </div>
 </section>
 
+<!-- ─── Effect of Margin Parameter and Target Instance ───────────────────── -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Effect of Margin Parameter and Target Instance</h2>
+
+    <!-- Effect 1 -->
+    <div class="columns is-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths has-text-centered">
+        <h3 class="title is-4">Effect of Margin Parameter</h3>
+        <figure class="image" style="margin-bottom: 1.5rem;">
+          <img src="static/images/effect_of_margin.png"
+               alt="Effect of the margin parameter on deformable adversarial perturbations.">
+        </figure>
+        <div class="content has-text-justified">
+          <p>
+            We analyze the influence of the margin parameter on the proposed deformable adversarial perturbation.
+            As the margin increases, the optimization encourages stronger separation between the ground-truth class
+            and competing classes, which can improve attack success but may also alter the deformation pattern.
+            This figure illustrates representative results under different margin settings and highlights the trade-off
+            between attack strength and deformation behavior.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="ablation-divider">
+
+    <!-- Effect 2 -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths has-text-centered">
+        <h3 class="title is-4">Effect of Target Instance</h3>
+        <figure class="image" style="margin-bottom: 1.5rem;">
+          <img src="static/images/effect_of_target.png"
+               alt="Effect of target instance selection on deformable adversarial perturbations.">
+        </figure>
+        <div class="content has-text-justified">
+          <p>
+            We further examine how the choice of target instance affects the resulting adversarial deformation.
+            Different target instances from the same category may induce distinct geometric tendencies, leading to
+            variations in the final deformed shape and attack characteristics. This figure presents qualitative examples
+            showing how target selection changes the deformation trajectory while preserving overall semantic consistency.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  
 <!-- ─── BibTeX ───────────────────────────────────────────────────────────── -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
