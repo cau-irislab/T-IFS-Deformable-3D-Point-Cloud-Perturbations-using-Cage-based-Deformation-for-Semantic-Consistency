@@ -759,11 +759,12 @@ document.querySelectorAll('.mesh-frame-btns').forEach(function(btns) {
         </figure>
         <div class="content has-text-justified">
           <p>
-            We analyze the influence of the margin parameter on the proposed deformable adversarial perturbation.
-            As the margin increases, the optimization encourages stronger separation between the ground-truth class
-            and competing classes, which can improve attack success but may also alter the deformation pattern.
-            This figure illustrates representative results under different margin settings and highlights the trade-off
-            between attack strength and deformation behavior.
+            To analyze the effects of the margin parameter in the adversarial loss on the level of 3D shape 
+            deformation in the generated adversarial examples, we find that increasing margin parameter causes the source 
+            point cloud to progressively deform, mimicking characteristics of the target chair such as a higher
+            backrest and a narrower width. This indicates that, as margina parameter increases, the proposed
+            method more strongly captures the geometric features of the target point cloud, resulting in a larger
+            overall deformation.
           </p>
         </div>
       </div>
@@ -781,10 +782,10 @@ document.querySelectorAll('.mesh-frame-btns').forEach(function(btns) {
         </figure>
         <div class="content has-text-justified">
           <p>
-            We further examine how the choice of target instance affects the resulting adversarial deformation.
-            Different target instances from the same category may induce distinct geometric tendencies, leading to
-            variations in the final deformed shape and attack characteristics. This figure presents qualitative examples
-            showing how target selection changes the deformation trajectory while preserving overall semantic consistency.
+            We analyze the influence of the target instance on the proposed deformable adversarial perturbation.
+            The proposed method adaptively deforms the source shape based on the structural characteristics of 
+            each target, resulting in adversarial examples that reflect the geometric features of the corresponding 
+            targets.
           </p>
         </div>
       </div>
